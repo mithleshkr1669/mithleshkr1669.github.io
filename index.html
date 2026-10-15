@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mithlesh Kumar | AI Engineer</title>
+<meta name="description" content="Mithlesh Kumar is an AI engineer building LangGraph agents with RAG, backed by evals and deployed on his own infrastructure. Open to hire.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="net" aria-hidden="true"></canvas>
+<header class="nav">
+  <a class="brand" href="#top">Mithlesh Kumar</a>
+  <nav aria-label="Primary">
+    <a href="#work">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a>
+    <a class="hire" href="#contact">Hire me</a>
+  </nav>
+</header>
+<main id="top">
+  <section class="hero">
+    <div>
+      <p class="pill">Open to AI engineering roles</p>
+      <h1>AI engineer building <span class="glow">agents that retrieve, reason and act.</span></h1>
+      <p class="lead">I build LangGraph agents with RAG, write the evals that prove they work, and deploy them on a VPS and domain I set up myself. My latest project, LifeOS, is a set of personal AI agents you can chat with.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://personal-lifeos-ai.pausa.money" target="_blank" rel="noopener">Chat with my agents</a>
+        <a class="btn" href="mailto:mithleshkr1669@gmail.com">Hire me</a>
+        <a class="btn" href="https://www.linkedin.com/in/mithlesh-kumar-5b3450229" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <figure class="graph">
+      <svg viewBox="0 0 440 360" role="img" aria-label="Agent graph: user message goes to a router, then to a finance or life agent, then to RAG retrieval, then to an answer">
+        <path style="--i:0" d="M220 50V80"/>
+        <path style="--i:1" d="M220 120C220 140 100 140 100 160"/>
+        <path style="--i:1" d="M220 120C220 140 340 140 340 160"/>
+        <path style="--i:2" d="M100 200C100 220 220 220 220 240"/>
+        <path style="--i:2" d="M340 200C340 220 220 220 220 240"/>
+        <path style="--i:3" d="M220 280V310"/>
+        <rect x="150" y="10" width="140" height="40"/><text class="tx" x="220" y="30">User message</text>
+        <rect class="alt" x="150" y="80" width="140" height="40"/><text class="tx" x="220" y="100">Router</text>
+        <rect x="30" y="160" width="140" height="40"/><text class="tx" x="100" y="180">Finance agent</text>
+        <rect x="270" y="160" width="140" height="40"/><text class="tx" x="340" y="180">Life agent</text>
+        <rect class="alt" x="150" y="240" width="140" height="40"/><text class="tx" x="220" y="260">RAG retrieval</text>
+        <rect x="150" y="310" width="140" height="40"/><text class="tx" x="220" y="330">Answer</text>
+      </svg>
+      <figcaption>A simplified agent graph</figcaption>
+    </figure>
+  </section>
+
+  <section class="section" id="work">
+    <h2>Projects</h2>
+    <p class="sub">Everything here runs on infrastructure I set up and maintain myself.</p>
+    <div class="bento">
+      <article class="tile t-blue span4">
+        <h3>Personal LifeOS AI</h3>
+        <p class="kind">Personal AI agents you can chat with</p>
+        <p>Open the site and talk to my agents directly. The backend is FastAPI with LangGraph orchestrating the agents, and RAG grounds their answers in data stored in PostgreSQL. The app is built in React Native.</p>
+        <a class="btn" href="https://personal-lifeos-ai.pausa.money" target="_blank" rel="noopener">Try it live</a>
+        <ul class="chips"><li>LangGraph</li><li>RAG</li><li>FastAPI</li><li>PostgreSQL</li><li>React Native</li><li>Docker</li><li>GitHub Actions</li></ul>
+      </article>
+      <article class="tile  span2">
+        <h3>Pausa</h3>
+        <p class="kind">Fintech platform</p>
+        <p>Live at <a class="link" href="https://pausa.money" target="_blank" rel="noopener">pausa.money</a>. A React.js and Next.js front end, a Node.js backend, Supabase for the database, Clerk for authentication, and an AI framework for personal finance agents.</p>
+        <ul class="chips"><li>Next.js</li><li>Node.js</li><li>Supabase</li><li>Clerk</li></ul>
+      </article>
+      <article class="tile span3">
+        <h3>Transaction Classifier</h3>
+        <p class="kind">Fine-tuned NLP model</p>
+        <p>A 4-layer BERT variant (about 29M parameters) underperformed. Weighted cross-entropy helped minority categories but not enough, and bert-base-uncased overfitted on limited data.</p>
+        <p>I switched to rules and started a real data pipeline through FIU under India's Account Aggregator framework. <a class="link" href="#" target="_blank" rel="noopener">View on Hugging Face</a><!-- TODO: paste your Hugging Face model URL --></p>
+        <ul class="chips"><li>BERT</li><li>Hugging Face</li><li>Python</li></ul>
+      </article>
+      <article class="tile  span3">
+        <h3>Web Agents</h3>
+        <p class="kind">Autonomous agents in Node.js</p>
+        <p>Agents built with the npm <code>ai</code> package that search the web and work with the file system on their own. I spent 40 to 50 percent of development time on evals for output quality, reliability and edge cases. <a class="link" href="#" target="_blank" rel="noopener">View on GitHub</a><!-- TODO: paste your GitHub repo URL --></p>
+        <ul class="chips"><li>Node.js</li><li>Agents</li><li>Evals</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <h2>Experience</h2>
+    <div class="role">
+      <div class="when">Sep 2024 to Apr 2026</div>
+      <div>
+        <h3>Software Developer, Notionzoa</h3>
+        <ul class="steps">
+          <li><strong>Web.</strong> Built on a React.js, Inertia.js and Laravel project in the MVC pattern, and created a role-based access control system from scratch.</li>
+          <li><strong>Databases.</strong> Worked extensively with MySQL: normalization, serialization and deserialization, and ORM.</li>
+          <li><strong>Mobile.</strong> Built a Flutter hotel management app that is live on the Google Play Store, using BLoC for state management and role-based screen rendering.</li>
+          <li><strong>APIs.</strong> Integrated REST APIs and agreed data contracts and business logic with the backend team at the feature planning stage.</li>
+          <li><strong>Mentoring.</strong> Helped junior developers debug and resolve issues in React.js codebases.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="role">
+      <div class="when">Ongoing</div>
+      <div>
+        <h3>AI Engineer, independent projects<small>Pausa and Personal LifeOS AI</small></h3>
+        <ul class="steps">
+          <li><strong>Agents.</strong> Building personal finance and life-management agents with LangGraph and RAG.</li>
+          <li><strong>Evals.</strong> Designing eval suites and iterating agent behavior from structured feedback.</li>
+          <li><strong>Infrastructure.</strong> Bought and configured my own VPS and domain, and run deployments with Docker, GitHub Actions CI/CD, Nginx, firewall rules and SSL/TLS.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <h2>Skills</h2>
+    <dl class="skills">
+      <div><dt>AI</dt><dd>LangGraph, RAG, agents, evals, BERT fine-tuning, Hugging Face, Python</dd></div>
+      <div><dt>Backend</dt><dd>FastAPI, Node.js, Supabase, Clerk, Laravel</dd></div>
+      <div><dt>Data</dt><dd>PostgreSQL, MongoDB, MySQL</dd></div>
+      <div><dt>Frontend</dt><dd>React.js, Next.js, JavaScript, TypeScript, Tailwind CSS</dd></div>
+      <div><dt>Mobile</dt><dd>React Native, Flutter, Dart</dd></div>
+      <div><dt>DevOps</dt><dd>Docker, GitHub Actions, Git, Nginx, UFW, Certbot</dd></div>
+    </dl>
+  </section>
+
+  <section class="cta" id="contact">
+    <h2>Let's build something with agents.</h2>
+    <p>I'm open to AI engineering roles. Email me, or try the agents first.</p>
+    <div class="links">
+      <a href="mailto:mithleshkr1669@gmail.com">mithleshkr1669@gmail.com</a>
+      <a href="tel:+919031719118">+91 90317 19118</a>
+      <a href="https://www.linkedin.com/in/mithlesh-kumar-5b3450229" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+</main>
+<footer class="footer">Mithlesh Kumar</footer>
+<script>
+(function(){
+var c=document.getElementById("net"),x=c.getContext("2d"),n=[],W,H,still=matchMedia("(prefers-reduced-motion: reduce)").matches;
+function size(){var d=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);var k=Math.round(W*H/22000);n=[];for(var i=0;i<Math.min(k,70);i++)n.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35})}
+function draw(){x.clearRect(0,0,W,H);for(var i=0;i<n.length;i++){var a=n[i];if(!still){a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1}
+for(var j=i+1;j<n.length;j++){var b=n[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);if(d<150){x.strokeStyle="rgba(61,242,255,"+(0.35*(1-d/150))+")";x.lineWidth=1;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}
+x.fillStyle="rgba(123,97,255,.9)";x.beginPath();x.arc(a.x,a.y,2,0,6.3);x.fill()}
+if(!still&&!document.hidden)requestAnimationFrame(draw)}
+document.addEventListener("visibilitychange",function(){if(!document.hidden&&!still)requestAnimationFrame(draw)});
+addEventListener("resize",function(){size();if(still)draw()});
+size();draw();
+})();
+</script>
+</body>
+</html>
